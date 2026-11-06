@@ -1,0 +1,23 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+# Command job that GitHub Actions submits (MLOps Lab 3).
+# Paths are relative to this file, so the job uploads the mlops/src folder.
+code: .
+command: >-
+  python train-model-parameters.py
+  --training_data ${{inputs.training_data}}
+  --reg_rate ${{inputs.reg_rate}}
+  --metrics_output ${{outputs.metrics_output}}
+inputs:
+  training_data:
+    type: uri_file
+    path: azureml:diabetes-data@latest      # data asset created by infra/setup.sh
+  reg_rate: 0.01
+outputs:
+  metrics_output:
+    type: uri_folder
+# current curated scikit-learn environment (the old AzureML-sklearn-1.0-ubuntu20.04-py38-cpu is retired)
+environment: azureml://registries/azureml/environments/sklearn-1.5/labels/latest
+compute: azureml:aml-cluster
+experiment_name: diabetes-training
+display_name: diabetes-train-command
+description: diabetes training job

@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+# Nakoba GenAIOps labs - provisions a Microsoft Foundry project with gpt-5.1 and gpt-5-mini.
+name: nakoba-genaiops
+
+infra:
+  provider: bicep
+  path: ./infra

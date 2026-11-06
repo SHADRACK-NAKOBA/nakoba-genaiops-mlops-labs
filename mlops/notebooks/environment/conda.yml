@@ -1,0 +1,15 @@
+# Fallback environment for the training jobs (only used if no curated
+# scikit-learn environment is available in your workspace).
+name: nakoba-sklearn-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - numpy<2.0
+      - pandas>=1.5,<3.0
+      - scikit-learn>=1.2,<1.6
+      - matplotlib>=3.6
+      - mlflow>=2.9,<3.0
+      - azureml-mlflow>=1.55

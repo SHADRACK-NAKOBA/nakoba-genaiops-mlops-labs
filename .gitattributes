@@ -1,0 +1,10 @@
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.bicep text eol=lf
+*.ipynb text eol=lf
+MLTable text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+*.pkl binary

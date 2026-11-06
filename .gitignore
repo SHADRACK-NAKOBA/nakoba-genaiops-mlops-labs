@@ -1,0 +1,24 @@
+# secrets and local settings
+.env
+*.env
+!.env.example
+.azure/
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Azure ML outputs
+*.amltmp
+*.amltemp
+mlops/infra/lab.env
+mlops/notebooks/src/
+mlops/notebooks/*.yml
+mlops/notebooks/ROC-Curve.png
+mlops/data/rai/**/*.parquet
+outputs/
+mlruns/
+# OS
+.DS_Store
+Thumbs.db

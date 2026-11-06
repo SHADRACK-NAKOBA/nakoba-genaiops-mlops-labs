@@ -1,0 +1,6 @@
+# Nakoba GenAIOps labs - only what the labs need (fewer packages = fewer install problems).
+# Tested with Python 3.10-3.13.
+azure-ai-projects==2.10.0   # Microsoft Foundry SDK (agents, versions, OpenAI client)
+azure-identity>=1.25.0      # sign-in (uses your 'az login' session)
+openai>=2.8.0               # Responses + Conversations API used to talk to the agent
+python-dotenv>=1.0.0        # reads the .env file
